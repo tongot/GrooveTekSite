@@ -1,32 +1,43 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app class="orange lighten-5">
+   <Navbar/>
+    <v-content class="mx-4">
+      <transition>
+      <router-view></router-view>      
+      </transition>
+    </v-content>
+    <Footer/>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/footer'
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+export default {
+  name: 'App',
+  components:{Navbar,Footer},
+  data: () => ({
+    //
+  }),
+};
+</script>
+<style scoped>
+ .v-enter-active{
+   animation:bounceIn 2s;
+ }
+ .v-leave-active{
+   animation:bounceIn 1s reverse;
+ }
+ @keyframes bounceIn{
+    0%{
+      transform: scale(0.1);
+      opacity: 0;
+    }
+     
+    100%{
+      transform: scale(1);
+      opacity: 1;
+    }
+ }
 </style>
