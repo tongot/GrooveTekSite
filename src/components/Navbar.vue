@@ -29,7 +29,7 @@
              <v-btn text color="black" route to="/ourservices">
                 <span>Services</span>
             </v-btn> 
-             <v-btn text color="black">
+             <v-btn text color="black" route to="/contactus">
                 <span>Contact us</span>
             </v-btn>  
             <v-btn text color="black" route to="/about">
