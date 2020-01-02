@@ -8,17 +8,16 @@
             <div >
                  <v-card outlined class="pa-2">
                 <v-row >
-                    <v-col cols="6" md="6" sm="12">
+                    <v-flex sm12 md6>
                         <v-img src="../views/homeImages/human2.jpg"></v-img>
-                    </v-col>
-                     <v-col cols="6" md="6"  sm="12"  justify="center" align="center">
-
+                    </v-flex>
+                     <v-flex sm12 md6  class="pa-5 justify-center align-center">
                         <h1 class=" display-1">Our services</h1>
                         <p class="font-weight-medium subtitle-1">Groove Tek delivers quality and timely solutions and services at a price that make our clients smile. An in-depth knowledge of various technology areas enables us to provide end to-end solutions and services. With our 'Web of Participation', we maximize the benefits of our depth, diversity and delivery capability, ensuring adaptability to client needs, and thus bringing out the most innovative solutions in every business and technology domain.
                             </p><p class="font-weight-medium subtitle-1">Groove Tek is your one stop partner where you can outsource all your IT services with complete peace of mind about quality and reliability. Our Software Solution’s strength lies in understanding the client’s business processes, culture, vision and goals across the industry segments and offering client oriented solutions which are highly reliable, creating customer comfort. 
                             Our team is committed to provide IT Services with:  Quality | Technology | Innovation
                         </p>
-                    </v-col>
+                    </v-flex>
                 </v-row>
                 <v-row justify="center" align="center">
                   <v-card-actions>
@@ -30,6 +29,7 @@
                  <template v-slot:activator="{on}">
                  <v-btn class="d-xl-none" text color="black" v-on="on" >
                       Services
+                      <v-icon right>keyboard_arrow_down</v-icon>
                 </v-btn>
                  </template>
                 <v-list>

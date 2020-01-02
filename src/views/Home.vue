@@ -20,10 +20,28 @@
     <v-app-bar dark height="50px">
       <v-toolbar-title class="display-1">Our Products</v-toolbar-title>
       <v-spacer></v-spacer>
-        <v-btn text v-for="product in products" :key="product.path">
+        <v-btn class="d-none d-lg-none d-xl-flex" text v-for="product in products" :key="product.path">
                 <v-icon left>{{product.icon}}</v-icon>
                 {{product.text}} |
             </v-btn> 
+            <v-menu text color="black">
+                 <template v-slot:activator="{on}">
+                 <v-btn class="d-xl-none" text color="white" v-on="on" >
+                      Products
+                      <v-icon right>keyboard_arrow_down</v-icon>
+                </v-btn>
+                 </template>
+                <v-list>
+                    <v-list-item v-for="product in products" :key="product.text">
+                        <v-list-item-action>
+                            <v-icon>{{product.icon}}</v-icon>
+                        </v-list-item-action>
+                        <v-list-item-content>
+                            {{product.text}}
+                        </v-list-item-content>
+                    </v-list-item>
+                </v-list>
+            </v-menu >
     </v-app-bar>
   </div>
 

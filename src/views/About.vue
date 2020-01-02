@@ -6,11 +6,11 @@
     <v-container> <v-sheet elevation="2">
       <v-row class="mt-4">
       <v-flex md3>
-        <c-card class="">
+        <v-card class="">
           <v-card-text class="font-weight-normal primary headline">
             "Vision without action is a daydream. Action without vision is a nightmare." 
           </v-card-text>
-        </c-card>
+        </v-card>
       </v-flex>
       </v-row>
       <v-row>

@@ -2,37 +2,35 @@
     <nav>
         <v-app-bar flat app  color="primary">
             <v-app-bar-nav-icon class="grey--text" @click="drawer=!drawer"></v-app-bar-nav-icon>
-            <v-toolbar-title class="text-uppercase primary--text">
+            <v-toolbar-title class="text-uppercase primary--text d-none d-lg-flex">
                 <v-img src="@/assets/GrooveTekLogo.png">..</v-img>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-             <!-- <v-menu text color="black">
+              <v-menu text color="black">
                  <template v-slot:activator="{on}">
-                 <v-btn text color="black" v-on="on" >
-                      Services
+                 <v-btn text color="black" class="d-flex d-sm-none" v-on="on" >
+                     {{menu}}
+                     <v-icon right>keyboard_arrow_down</v-icon>
                 </v-btn>
                  </template>
                 <v-list>
-                    <v-list-item v-for="service in services" :key="service.text" router :to="service.route">
-                        <v-list-item-action>
-                            <v-icon>{{service.icon}}</v-icon>
-                        </v-list-item-action>
+                    <v-list-item v-for="service in menuList" :key="service.menu" router :to="service.route" @click="menu=service.menu">
                         <v-list-item-content>
-                            {{service.text}}
+                            {{service.menu}}
                         </v-list-item-content>
                     </v-list-item>
                 </v-list>
-            </v-menu >-->
-              <v-btn text color="black" route to="/">
+            </v-menu >
+              <v-btn text color="black" class="d-none d-sm-flex" route to="/">
                 <span>Home</span>
             </v-btn> 
-             <v-btn text color="black" route to="/ourservices">
+             <v-btn text color="black" class="d-none d-sm-flex"  route to="/ourservices">
                 <span>Services</span>
             </v-btn> 
-             <v-btn text color="black" route to="/contactus">
+             <v-btn text color="black" class="d-none d-sm-flex"  route to="/contactus">
                 <span>Contact us</span>
             </v-btn>  
-            <v-btn text color="black" route to="/about">
+            <v-btn text color="black" class="d-none d-sm-flex"  route to="/about">
                 <span>About</span>
             </v-btn>            
             <!--<v-btn text color="black">
@@ -60,20 +58,17 @@ export default {
     {
         return{
             drawer:false,
+            menu:'home',
             links:[
                 {icon:'dashboard',text:'Dashboard',route:'/'},
                 {icon:'email',text:'Inbox',route:'/about'},
                 {icon:'contact_support',text:'Contact Support',route:'/home'}
             ],
-            services:[
-                 {icon:'business',text:'Services',route:'/ourservices'},
-                {icon:'perm_data_setting',text:'Project Managment',route:'/about'},
-                {icon:'developer_board',text:'Software Development',route:'/home'},
-                {icon:'fiber_smart_record',text:'Electronic Records Management',route:'/home'},
-                {icon:'cloud_circle',text:'Cloud Solution',route:'/home'},
-                {icon:'phonelink',text:'Digital Marketing',route:'/home'},
-               {icon:'wifi_lock',text:'IT Security',route:'/home'},
-               {icon:'format_strikethrough',text:'ICT Infrastructure',route:'/home'},
+            menuList:[
+                 {menu:'Home',route:'/'},
+                {menu:'Services',route:'/ourservices'},
+                {menu:'About',route:'/about'},
+                {menu:'Contact Us',route:'/contactus'},
             ],
            
         }
