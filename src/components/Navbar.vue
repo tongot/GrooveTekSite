@@ -1,9 +1,9 @@
 <template>
     <nav>
         <v-app-bar flat app  color="primary">
-            <!--<v-app-bar-nav-icon class="grey--text" @click="drawer=!drawer"></v-app-bar-nav-icon>-->
-            <v-toolbar-title class="text-uppercase black--text">
-                <v-img src="@/assets/GrooveTekLogo.png"></v-img>
+            <v-app-bar-nav-icon class="grey--text" @click="drawer=!drawer"></v-app-bar-nav-icon>
+            <v-toolbar-title class="text-uppercase primary--text">
+                <v-img src="@/assets/GrooveTekLogo.png">.</v-img>
             </v-toolbar-title>
             <v-spacer></v-spacer>
              <!-- <v-menu text color="black">
