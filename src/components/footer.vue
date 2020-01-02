@@ -25,7 +25,7 @@
                     </v-list-item>
                 </v-list>
             </v-flex>
-            <v-flex md3 xs6 class="primary">
+            <v-flex md3 xs12 class="primary">
             <v-list class="primary">
                     <v-list-item v-for="service in services3" :key="service.text" route :to="service.route">
                         <v-list-item-action>
@@ -37,7 +37,7 @@
                     </v-list-item>
                 </v-list>
             </v-flex>
-            <v-flex md3 xs6 class="d-flex align-end justify-end pa-5 black">
+            <v-flex md3 xs12 class="d-flex align-end justify-end pa-5 black">
                 <address >
                     <br><span class="white--text"><v-icon style="color:white">phone</v-icon>+267 310 1315</span>
                     <br><span class="white--text"><v-icon style="color:white">email</v-icon>support@groovetek.co.bw</span>
@@ -77,7 +77,7 @@ export default {
              {icon:'filter_1',text:'Home',route:'/'},
                 {icon:'filter_2',text:'Vision, Mission, Values',route:'/about'},
                {icon:'filter_3',text:'Our Services',route:'/ourservices'},
-               {icon:'filter_4',text:'Our Contacts',route:'/home'},
+               {icon:'filter_4',text:'Our Contacts',route:'/contactus'},
         ]
     }),
     methods:{

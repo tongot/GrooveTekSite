@@ -12,10 +12,10 @@
                     <h2 class="grey--text headline display-1">Just Get In Touch!</h2>
                     <v-divider></v-divider>
                     <p class="grey--text subtitle">We would love to hear from you</p>
-                    <v-text-field height="50px" label="Name"></v-text-field>
-                    <v-text-field height="50px" label="Email"></v-text-field>
-                    <v-text-field height="50px" label="Subject"></v-text-field>
-                    <v-textarea  label="Message"></v-textarea>
+                    <v-text-field v-model="name" :rules="nameRule" height="50px" label="Name"></v-text-field>
+                    <v-text-field v-model="email" :rules="emailRule" height="50px" label="Email"></v-text-field>
+                    <v-text-field v-model="subject"  height="50px" label="Subject"></v-text-field>
+                    <v-textarea v-model="message" :counter=50 :rules="messageRule" label="Message"></v-textarea>
                     <v-row justify="end">
                         <v-btn class="primary" depressed><v-icon left>email</v-icon>Submit</v-btn>
                     </v-row>
@@ -38,3 +38,26 @@
         </v-container>
     </div>
 </template>
+<script>
+export default {
+    data:()=>({
+                name:'',
+                email:'',
+                subject:'',
+                message:'',
+                nameRule:[
+                    v=>!!v||"Name is required",
+                    v=>v.length>=3||"Name must be at least 3 characters",
+                ],
+                emailRule:[
+                     v=>!!v||"Email is required",
+                     v=> /.+@./.test(v)||"Email must be a valid email"
+                ],
+                 messageRule:[
+                    v=>!!v||"Message is required",
+                    v=>v.length>=10||"Message must be at least 10 characters",
+                    v=>v.length<=50||"Message must be less than 50 characters",
+                ],
+    })
+}
+</script>

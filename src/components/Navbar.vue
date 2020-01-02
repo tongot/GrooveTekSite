@@ -1,7 +1,7 @@
 <template>
     <nav>
         <v-app-bar flat app  color="primary">
-            <v-app-bar-nav-icon class="grey--text" @click="drawer=!drawer"></v-app-bar-nav-icon>
+            <!--<v-app-bar-nav-icon class="grey--text" @click="drawer=!drawer"></v-app-bar-nav-icon>-->
             <v-toolbar-title class="text-uppercase black--text">
                 <v-img src="@/assets/GrooveTekLogo.png"></v-img>
             </v-toolbar-title>
@@ -35,12 +35,12 @@
             <v-btn text color="black" route to="/about">
                 <span>About</span>
             </v-btn>            
-            <v-btn text color="black">
+            <!--<v-btn text color="black">
                 <span>sign In</span>
                 <v-icon right></v-icon>
-            </v-btn>
+            </v-btn>-->
         </v-app-bar>
-        <v-navigation-drawer app  v-model="drawer" color="primary">
+        <!--<v-navigation-drawer app  v-model="drawer" color="primary">
            <v-list>
                <v-list-item v-for="link in links" :key="link.text" router :to="link.route">
                    <v-list-item-action>
@@ -51,7 +51,7 @@
                    </v-list-item-content>
                </v-list-item>
            </v-list>
-        </v-navigation-drawer>
+        </v-navigation-drawer>-->
     </nav>
 </template>
 <script>
