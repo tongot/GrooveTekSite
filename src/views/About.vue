@@ -38,7 +38,7 @@
                         <v-toolbar-title class="display-1 orange--text">OUR MISSION</v-toolbar-title>
                     </v-app-bar>
                     <v-card-subtitle class="font-weight-medium subtitle-1">
-                       To produce excellent services in the field of IT Services and Consultancy with maximum efforts driven towards customer satisfaction
+                       To produce excellent services in the field of IT Services and Consultancy with maximum efforts driven towards customer satisfaction.
                     </v-card-subtitle>
                 </v-card>
         </v-row>
