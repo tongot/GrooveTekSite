@@ -11,7 +11,7 @@
                 <v-flex xs12 md4>
                     <h2 class="grey--text headline display-1">Just Get In Touch!</h2>
                     <v-divider></v-divider>
-                    <p class="grey--text subtitle">We would love to hear from you.</p>
+                    <p class="grey--text subtitle">We would love to hear from you</p>
                     <v-text-field v-model="name" :rules="nameRule" height="50px" label="Name"></v-text-field>
                     <v-text-field v-model="email" :rules="emailRule" height="50px" label="Email"></v-text-field>
                     <v-text-field v-model="subject"  height="50px" label="Subject"></v-text-field>
