@@ -69,7 +69,7 @@
         <v-card outlined class="black" justify="center" align="center">
           <v-icon style="font-size:70px; color:orange">highlight</v-icon>
          <v-card-text class="grey--text headline">
-            Innovatio
+            Innovation
          </v-card-text>
        </v-card>
       </v-flex> 
